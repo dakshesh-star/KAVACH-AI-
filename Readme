@@ -1,0 +1,190 @@
+#  Kavach AI
+
+**Kavach AI** is an AI-powered scam detection and cyber safety platform designed to help users identify, understand, and respond to online fraud before they become victims.
+
+With the rise of phishing attacks, fake job offers, banking scams, OTP fraud, malicious links, and social engineering attacks, Kavach AI provides a unified platform where users can analyze suspicious content, receive detailed risk assessments, and take informed action.
+
+---
+
+##  Problem Statement
+
+Online scams are becoming increasingly sophisticated, making it difficult for users to distinguish legitimate communications from fraudulent ones.
+
+Most existing solutions either:
+
+* Focus only on links or websites
+* Require technical cybersecurity knowledge
+* Provide generic AI responses without actionable guidance
+
+Kavach AI bridges this gap by combining AI-powered scam detection with fraud insights, user guidance, and cybercrime reporting assistance in a single platform.
+
+---
+
+##  Features
+
+###  AI-Powered Scam Detection
+
+Analyze suspicious content using advanced AI models.
+
+###  Message & Email Analysis
+
+Detect phishing attempts, fraud indicators, urgency tactics, impersonation attempts, and social engineering patterns.
+
+###  URL Verification
+
+Analyze suspicious links and identify potential phishing or fraudulent websites.
+
+###  Screenshot Analysis
+
+Upload screenshots of messages, emails, or chats for AI-based scam detection.
+
+###  Risk Assessment
+
+Generate scam risk scores and classify fraud categories.
+
+###  Scam Classification
+
+Identify various scam types, including:
+
+* Banking Fraud
+* OTP Scams
+* Phishing Attacks
+* Fake Job Offers
+* Investment Scams
+* Social Engineering Attacks
+
+###  Fraud Insights & Analytics
+
+Track scam trends and gain insights into emerging fraud patterns.
+
+###  Community Intelligence
+
+Leverage community-driven scam intelligence to improve awareness of suspicious activities.
+
+###  User Authentication
+
+Secure signup, login, and account management using Supabase Authentication.
+
+###  Analysis History
+
+Access previously analyzed content and review historical reports.
+
+###  Cybercrime Guidance
+
+Receive recommendations and official reporting resources for cybercrime complaints.
+
+###  Structured Fraud Reports
+
+Generate detailed fraud reports that can assist users while filing complaints with cybercrime authorities.
+
+---
+
+##  System Architecture
+
+```text
+User Input
+    │
+    ├── Message
+    ├── URL
+    └── Screenshot
+           │
+           ▼
+      Kavach AI
+           │
+           ▼
+      Gemini AI
+           │
+           ▼
+ Scam Detection Engine
+           │
+           ▼
+ Risk Assessment
+ Fraud Classification
+ Red Flag Analysis
+ Recommended Actions
+           │
+           ▼
+ Dashboard & History
+           │
+           ▼
+ Cybercrime Guidance
+```
+
+---
+
+##  Tech Stack
+
+### Frontend
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+
+### Backend
+
+* Next.js API Routes
+* Supabase
+
+### Database
+
+* PostgreSQL (Supabase)
+
+### Authentication
+
+* Supabase Authentication
+
+### Artificial Intelligence
+
+* Google Gemini AI
+
+---
+
+##  Key Objectives
+
+* Detect scams before users become victims.
+* Simplify scam verification for non-technical users.
+* Increase awareness of cyber threats.
+* Provide actionable recommendations.
+* Support cybercrime reporting workflows.
+* Build a safer digital environment.
+
+---
+
+##  Security Focus
+
+Kavach AI is designed around the principle of helping users make informed security decisions by:
+
+* Identifying fraud indicators
+* Highlighting suspicious behavior
+* Explaining risk factors
+* Guiding users toward appropriate reporting channels
+
+---
+
+##  Future Vision
+
+The long-term vision for Kavach AI is to evolve into a comprehensive digital safety platform capable of:
+
+* Real-time scam intelligence
+* Advanced phishing detection
+* Browser-based scam protection
+* Community-powered fraud reporting
+* Automated cybercrime complaint documentation
+* Multi-language scam analysis
+* Mobile platform support
+
+---
+
+##  Developer
+
+Built by **Dakshesh Saluja**
+
+Passionate about AI, cybersecurity, and building technology that solves real-world problems.
+
+---
+
+##  Support
+
+If you found this project interesting, consider giving the repository a  and sharing your feedback.
+
+Together, we can make the internet a safer place.
