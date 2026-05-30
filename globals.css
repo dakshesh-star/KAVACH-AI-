@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #060B18;
+  --bg-alt: #0A101F;
+  --border: #1E2A45;
+  --blue: #2563EB;
+  --violet: #7C3AED;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #060B18; }
+::-webkit-scrollbar-thumb { background: #1E2A45; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2a3a5c; }
+
+/* Selection */
+::selection { background: rgba(37, 99, 235, 0.3); color: #fff; }
+
+/* Keyframes */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1) translateY(0); filter: drop-shadow(0 6px 24px rgba(59,130,246,0.5)); }
+  50%       { transform: scale(1.06) translateY(-3px); filter: drop-shadow(0 10px 36px rgba(124,58,237,0.6)); }
+}
+@keyframes pulseGreen {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+  50%       { box-shadow: 0 0 0 5px rgba(34,197,94,0.08); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.15; }
+  50%       { opacity: 0.35; }
+}
+@keyframes scanline {
+  0%   { top: -2%; }
+  100% { top: 102%; }
+}
+@keyframes ripout {
+  0%   { transform: translate(-50%,-50%) scale(0.4); opacity: 0.6; }
+  100% { transform: translate(-50%,-50%) scale(2.8); opacity: 0; }
+}
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(37,99,235,0.25); }
+  50%       { border-color: rgba(99,179,237,0.6); }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes barGrow {
+  from { width: 0; }
+  to   { width: var(--w); }
+}
+@keyframes scoreReveal {
+  from { opacity: 0; transform: scale(0.6); }
+  60%  { transform: scale(1.12); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes nodeFlash {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1; }
+}
+@keyframes stepReveal {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-slide { animation: fadeSlide 0.6s ease-out both; }
+.animate-breathe { animation: breathe 3.2s ease-in-out infinite; }
+.animate-pulse-green { animation: pulseGreen 2s infinite; }
+.animate-shimmer { animation: shimmer 4s linear infinite; }
+.animate-glow-pulse { animation: glowPulse 8s ease-in-out infinite; }
+.animate-scanline { animation: scanline 5s linear infinite; }
+.animate-spin-slow { animation: spin 20s linear infinite; }
+.animate-spin-slow-r { animation: spin 32s linear infinite reverse; }
+
+.gradient-kavach { background: linear-gradient(135deg, #2563EB, #7C3AED); }
+.gradient-text {
+  background: linear-gradient(90deg, #60A5FA 0%, #A78BFA 50%, #60A5FA 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.042);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 90% 65% at 50% 0%, black 0%, transparent 100%);
+}
